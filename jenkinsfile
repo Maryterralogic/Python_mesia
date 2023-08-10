@@ -1,36 +1,48 @@
 pipeline {
     agent any
-
     environment {
-        DOCKER_REGISTRY_URL = 'your-docker-registry-url'
-        DOCKER_REGISTRY_CREDENTIALS_ID = 'your-docker-registry-credentials-id'
+        //once you sign up for Docker hub, use that user_id here
+        registry = "dockerrani/jenkins_image"
+        //- update your credentials ID after creating credentials for connecting to Docker Hub
+        registryCredential = '3bee87d1-913d-46a5-bd32-5b421e52dcab'
+        dockerImage = ''
     }
 
     stages {
-        stage('Build Docker Image') {
+        stage('Cloning Git') {
             steps {
-                script {
-                    def dockerImage = docker.build("my-docker-image:${env.BUILD_NUMBER}")
-                }
+                checkout([$class: 'GitSCM', branches: [[name: '*/feature-branch']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '', url: 'https://github.com/Maryterralogic/Python_mesia.git']]])
             }
         }
 
-        stage('Push Docker Image') {
-            steps {
-                script {
-                    docker.withRegistry("${env.DOCKER_REGISTRY_URL}", "${env.DOCKER_REGISTRY_CREDENTIALS_ID}") {
-                        dockerImage.push()
-                    }
-                }
-            }
+    // Building Docker images
+    stage('Building image') {
+      steps{
+        script {
+          dockerImage = docker.build registry
         }
-
-        stage('Run Docker Image') {
-            steps {
-                script {
-                    sh "docker run -d -p 8000:8000 my-docker-image:${env.BUILD_NUMBER}"
-                }
-            }
-        }
+      }
     }
+
+     // Uploading Docker images into Docker Hub
+    stage('Upload Image') {
+     steps{
+         script {
+            docker.withRegistry( '', registryCredential ) {
+            dockerImage.push()
+            }
+        }
+      }
+    }
+
+
+    // Running Docker container, make sure port 8096 is opened in
+    stage('Docker Run') {
+     steps{
+         script {
+            bat "docker run %registry%"
+         }
+      }
+    }
+  }
 }
