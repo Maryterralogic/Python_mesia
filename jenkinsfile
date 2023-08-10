@@ -1,0 +1,36 @@
+pipeline {
+    agent any
+
+    environment {
+        DOCKER_REGISTRY_URL = 'your-docker-registry-url'
+        DOCKER_REGISTRY_CREDENTIALS_ID = 'your-docker-registry-credentials-id'
+    }
+
+    stages {
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    def dockerImage = docker.build("my-docker-image:${env.BUILD_NUMBER}")
+                }
+            }
+        }
+
+        stage('Push Docker Image') {
+            steps {
+                script {
+                    docker.withRegistry("${env.DOCKER_REGISTRY_URL}", "${env.DOCKER_REGISTRY_CREDENTIALS_ID}") {
+                        dockerImage.push()
+                    }
+                }
+            }
+        }
+
+        stage('Run Docker Image') {
+            steps {
+                script {
+                    sh "docker run -d -p 8000:8000 my-docker-image:${env.BUILD_NUMBER}"
+                }
+            }
+        }
+    }
+}
