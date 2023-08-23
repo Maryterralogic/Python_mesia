@@ -24,3 +24,10 @@ while True:
     else:
         print(f"{ip} is not valid. Skipping...")
 
+file.close()  # Close the file after the loop
+
+# Display the contents of the file
+with open("ip_list.txt", "r") as file:
+    contents = file.read()
+    print("\nContents of ip_list.txt:")
+    print(contents)
