@@ -59,3 +59,84 @@ Usage:
   The program will continue to prompt for IP addresses until you choose to exit by typing "exit".
   4.When you decide to exit, the program will save the validation and ping check results in the ip_list.txt file.
 
+**Task 4: Employee Details Generator using Random Module:**
+
+This Python program generates employee details using the random module. The program generates random employee IDs, locations, and salaries based on specified ranges and options. Here's a breakdown of the program's functionality:
+
+Employee Details Generated:
+
+Employee ID (1 to 9999): Randomly generated unique identification numbers.
+Employee Location: Dynamically selects a city from the given list (Kormangala, HSR Layout, Ballary, Mumbai, Chennai, Nellore, Gurgaon, Hyderabad).
+Employee Salary (20,000 to 1,50,000): Randomly generated salary amounts within the specified range.
+Input from Command Line:
+
+The program takes input from the command line to determine how many employee details to generate and display.
+Generators and Yield:
+
+The employee details are generated using generator concepts, utilizing the yield statement. This allows for memory-efficient generation of details on-the-fly.
+Displaying Employee Details:
+
+The next() function is used to retrieve the next set of generated employee details, which are then displayed on the console.
+This program is useful for generating realistic employee data for testing and demonstration purposes. It demonstrates the use of randomization, input handling, and generator concepts in Python programming.
+
+**Task 5: Multiple Producers and Multiple Consumers using Threads:**
+
+This Python program demonstrates the concept of multiple producers and multiple consumers using threads. It showcases a concurrent scenario where producers generate items and consumers consume them concurrently, making use of the threading module.
+  
+The program utilizes the threading module in Python to implement multi-threading.
+
+The user is prompted to input the number of producers and consumers to simulate the functionality.
+Producers create items while consumers consume them concurrently using threads.
+
+How to Run
+1.Clone the repository or download the Python script.
+
+2.Open a terminal and navigate to the directory containing the script.
+
+3.Run the script using the following command:
+python Threading.py
+Follow the prompts to enter the number of producers and consumers.
+
+Program Components
+Producers: These threads simulate producers generating items in a concurrent manner.
+Consumers: These threads simulate consumers consuming items concurrently.
+Thread Synchronization: The program utilizes synchronization mechanisms like locks to prevent race conditions while accessing shared resources.
+
+Benefits
+Illustrates the concept of multi-threading and concurrency in Python.
+Demonstrates the usage of thread synchronization mechanisms for ensuring data consistency.
+
+Use Cases
+Demonstrating parallel processing and concurrency in scenarios involving multiple producers and consumers.
+
+**Task 6: Area Calculation using Inheritance and Function Overloading:**
+
+This Python program calculates the area of various shapes, including squares, triangles, and circles, by leveraging the concepts of inheritance and function overloading. The Shape class serves as the base class, and specific shapes inherit from it to calculate their respective areas.
+
+Program Overview
+The program employs the principles of object-oriented programming, inheritance, and function overloading to calculate shape areas.
+It showcases the versatility of Python's object-oriented features.
+
+How to Run
+Clone the repository or download the Python script.
+
+Open a terminal and navigate to the directory containing the script.
+
+Run the script using the following command:
+python Shape.py
+Follow the prompts to provide necessary dimensions for calculating shape areas.
+
+Program Components
+Shape Class: The base class Shape defines the area() method as a placeholder to be overridden by derived shape classes.
+
+Derived Shape Classes: The Square, Triangle, and Circle classes inherit from Shape and provide their own implementations of the area() method.
+
+Function Overloading: By overriding the area() method, the derived classes achieve function overloading, allowing each shape to calculate its area using specific formulas.
+
+Benefits
+Demonstrates the principles of inheritance and function overloading in Python.
+Illustrates how object-oriented programming enables code reusability and extensibility.
+
+Use Cases
+Implementing area calculations for various shapes in applications like graphics software or geometry calculators.
+Enhancing programming skills in object-oriented design and implementation.
