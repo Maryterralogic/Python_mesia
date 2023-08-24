@@ -47,16 +47,22 @@ Features:
 - Displays a list of stored email IDs when the user decides to exit.
 
 **Task3:IP Validation and Ping Check Program:**
-  This Python program validates entered IP addresses using regular expressions and checks whether the IP addresses are pingable. 
-  It provides the ability to continue validating and checking IPs until the user decides to exit. 
-  The program also records the results of validation and ping checks in a text file named ip_list.txt.
+This Python program validates entered IP addresses using regular expressions and checks whether the IP addresses are pingable. 
+
+It provides the ability to continue validating and checking IPs until the user decides to exit. 
+
+The program also records the results of validation and ping checks in a text file named ip_list.txt.
+
 Usage:
   1.Copy the provided Python code into a .py file on your local machine.
+
   2.Run the program using a Python interpreter:
     python ip_validation_and_ping_check.py
     The program will prompt you to enter an IP address for validation and ping check.
+
   3.If the IP address is valid based on the regular expression, the program will attempt to ping it. The results of validation and ping checks will be displayed, and they will be recorded in the ip_list.txt file.
   The program will continue to prompt for IP addresses until you choose to exit by typing "exit".
+
   4.When you decide to exit, the program will save the validation and ping check results in the ip_list.txt file.
 
 **Task 4: Employee Details Generator using Random Module:**
