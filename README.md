@@ -146,3 +146,78 @@ Illustrates how object-oriented programming enables code reusability and extensi
 Use Cases
 Implementing area calculations for various shapes in applications like graphics software or geometry calculators.
 Enhancing programming skills in object-oriented design and implementation.
+
+**Task 7:ATM Machine Notes Counter**
+Features:
+
+- Calculates the number of 500, 200, and 50 notes to be returned based on the withdrawal amount.
+- Validates the user-entered withdrawal amount to prevent invalid input.
+- Offers the user the choice to continue with the withdrawal operation or cancel it.
+
+Implementation Details
+The program is implemented using object-oriented programming principles. It consists of the following classes:
+
+ATM: Represents the ATM machine and contains methods for calculating note counts, validating amounts, and interacting with the user.
+Main: Contains the main entry point of the program.
+The program is designed to be user-friendly, allowing users to easily perform withdrawal operations and providing clear instructions and prompts.
+
+**Task 8:Employee Attendance Tracker**
+
+Description:
+You are required to create a program that accomplishes the following tasks:
+
+1. Manually create an Excel/CSV sheet with the given fields: Emp ID, Aug 23, Aug 24, Aug 25, Aug 28, Aug 29, Aug 30.
+2. Fill the data in the cells with values "WFO", "WFH", or leave the cell blank to represent the attendance status.
+3. The program should calculate and provide the following insights:
+
+   - Count of employees marked "WFH" and "WFO" for the current date.
+   - Count of employees marked "WFH" and "WFO" for the previous 5 days from the current date.
+   - Employee IDs who have not filled attendance for today and the previous 5 days.
+
+Usage:
+
+1. Prepare your Excel/CSV sheet with the attendance data as described. File name - 'attendance.xlsx'.
+2. Save the sheet in the same directory as the Python program `Employee_attendance_analysis.py`.
+3. Run the program using Python:
+
+**Task 8:Heat Map Generator**
+
+Task Description:
+
+You are required to accomplish the following tasks:
+
+1. Create a new Excel sheet with the following columns: Team, Size, Color.
+2. Fill in the data according to your requirements, where:
+   - **Team**: The team's name or identifier.
+   - **Size**: The size of the team, which will determine the block size in the heat map.
+   - **Color**: The color representation based on the specified ranges.
+
+3. Use the Python module 'plotly' to generate a heat map. The heat map should fulfill the following criteria:
+   - The blocks in the heat map should correspond to the team's size and be colored based on the specified ranges.
+   - The color can be specified using RGB values or corresponding color names.
+   - The color ranges are as follows:
+     - 30-25: Dark Green Color
+     - 24-20: One Level below Dark Green Color
+     - 19-15: Two Levels below Dark Green Color
+     - 14-10: Two Levels above Light Green Color
+     - 09-05: One Level above Light Green Color
+     - 04-00: Light Green Color
+   - The entire heat map should be rectangular in shape.
+
+Usage:
+
+1. Prepare your Excel sheet with the team data, size, and color codes as described.
+
+2. Install the 'plotly' module using pip if you haven't already:
+
+CMD:
+pip install plotly
+Run the Python script heatmap_code.py:
+
+python heatmap_code.py
+
+The script will read the Excel data and generate a heat map based on the specified criteria.
+Excel file : Heat_map.csv.xlsx
+
+
+
