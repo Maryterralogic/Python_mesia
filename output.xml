@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.9.13 on win32)" generated="20230904 10:27:07.641" rpa="false" schemaversion="4">
+<suite id="s1" name="Testcase1" source="C:\Users\MesiaMary A-1957\PycharmProjects\MyProject_robot\Framework\TestCycles\Module 1 folder\testscenario\testcase1.robot">
+<test id="s1-t1" name="TestCasse For Registration" line="6">
+<kw name="Open Registration Page">
+<msg timestamp="20230904 10:27:08.048" level="FAIL">No keyword with name 'Open Registration Page' found.</msg>
+<status status="FAIL" starttime="20230904 10:27:08.048" endtime="20230904 10:27:08.048"/>
+</kw>
+<kw name="Maximize Browser URL">
+<status status="NOT RUN" starttime="20230904 10:27:08.057" endtime="20230904 10:27:08.057"/>
+</kw>
+<kw name="Input Contact Information">
+<status status="NOT RUN" starttime="20230904 10:27:08.063" endtime="20230904 10:27:08.063"/>
+</kw>
+<kw name="Input Mailing Information">
+<status status="NOT RUN" starttime="20230904 10:27:08.068" endtime="20230904 10:27:08.068"/>
+</kw>
+<kw name="Input User Information">
+<status status="NOT RUN" starttime="20230904 10:27:08.073" endtime="20230904 10:27:08.073"/>
+</kw>
+<kw name="Submit Registration">
+<status status="NOT RUN" starttime="20230904 10:27:08.076" endtime="20230904 10:27:08.076"/>
+</kw>
+<kw name="Close Browser URL">
+<status status="NOT RUN" starttime="20230904 10:27:08.083" endtime="20230904 10:27:08.083"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Registration Successful !!!!!!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230904 10:27:08.092" endtime="20230904 10:27:08.092"/>
+</kw>
+<status status="FAIL" starttime="20230904 10:27:08.047" endtime="20230904 10:27:08.093">No keyword with name 'Open Registration Page' found.</status>
+</test>
+<status status="FAIL" starttime="20230904 10:27:07.644" endtime="20230904 10:27:08.097"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Testcase1">Testcase1</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230904 10:27:08.029" level="ERROR">Error in file 'C:\Users\MesiaMary A-1957\PycharmProjects\MyProject_robot\Framework\TestCycles\Module 1 folder\testscenario\testcase1.robot' on line 3: Resource file 'Framework\Resources\Page Objects\registrationPO.robot' does not exist.</msg>
+<msg timestamp="20230904 10:27:08.045" level="ERROR">Error in file 'C:\Users\MesiaMary A-1957\PycharmProjects\MyProject_robot\Framework\TestCycles\Module 1 folder\testscenario\testcase1.robot' on line 4: Resource file 'Framework\Resources\Keywords\common_keywords.robot' does not exist.</msg>
+</errors>
+</robot>
